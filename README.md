@@ -1,5 +1,5 @@
 ---
-title: LLM Analysis - Quiz Solver Agent
+title: Quiz Agent - Quiz Solver
 emoji: 🤖
 colorFrom: blue
 colorTo: purple
@@ -8,7 +8,7 @@ pinned: false
 app_port: 7860
 ---
 
-# LLM Analysis - Autonomous Quiz Solver Agent
+# Quiz Agent - Autonomous Quiz Solver
 
 An intelligent, autonomous agent built with LangGraph and LangChain that solves data-related quizzes involving web scraping, data processing, analysis, and visualization tasks. The system uses Google's Gemini 2.5 Flash model to orchestrate tool usage and make decisions.
 
@@ -80,7 +80,7 @@ The project uses a **LangGraph state machine** architecture with the following c
 ## 📁 Project Structure
 
 ```
-LLM-Analysis-TDS-Project-2/
+Quiz-Agent-TDS-Project-2/
 ├── agent.py                    # LangGraph state machine & orchestration
 ├── main.py                     # FastAPI server with /solve endpoint
 ├── pyproject.toml              # Project dependencies & configuration
@@ -108,7 +108,7 @@ LLM-Analysis-TDS-Project-2/
 
 ```bash
 git clone https://github.com/24f1000353/Tds_Project2.git
-cd LLM-Analysis-TDS-Project-2
+cd Quiz-Agent-TDS-Project-2
 ```
 
 ### Step 2: Install Dependencies
@@ -285,7 +285,7 @@ The agent has access to the following tools:
 ### Build the Image
 
 ```bash
-docker build -t llm-analysis-agent .
+docker build -t quiz-agent .
 ```
 
 ### Run the Container
@@ -295,7 +295,7 @@ docker run -p 7860:7860 \
   -e EMAIL="your.email@example.com" \
   -e SECRET="your_secret_string" \
   -e GOOGLE_API_KEY="your_api_key" \
-  llm-analysis-agent
+  quiz-agent
 ```
 
 ### Deploy to HuggingFace Spaces
